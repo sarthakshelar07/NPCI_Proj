@@ -1,0 +1,15 @@
+<div class="main-container">
+  <div class="card">
+    <h1>{{ title }}</h1>
+
+    <div class="form-group">
+      <label for="userInput">Enter your username:</label>
+      <input id="userInput" type="text" [(ngModel)]="username" placeholder="e.g. John Doe" class="form-control" />
+    </div>
+
+    <div class="greeting-box" *ngIf="username">
+      <h2>Hello - {{ username }}</h2>
+    </div>
+  </div>
+</div>
+<router-outlet />
